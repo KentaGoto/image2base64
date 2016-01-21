@@ -6,7 +6,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Gui, Add, Text, x30, 対象ファイル:
 Gui, Add, Edit, x100 yp+0 vTarget w400,
 Gui, Add, Button, gExec x465 yp+25, &実行
-Gui, Add, Button, gButton終了 x400 yp+0, &終了
+Gui, Add, Button, gButton終了 x420 yp+0, &終了
 Gui, Show, , image2base64
 return
 
