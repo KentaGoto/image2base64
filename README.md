@@ -2,13 +2,13 @@
 
 ## USAGE
 
-1. **image2base64_GUI.exe** をダブルクリックして起動する
+1. Double-click **image2base64_GUI.exe** to launch it.
 
-2. BASE64 に変換したい画像をドラッグアンドドロップする
+2. Drag and drop images to be converted to BASE64.
 
-3. **[実行]** をクリックする
+3. Click **[Run]**.
 
-4. 実行結果はクリップボードにコピーされます
+4. The result is copied to the clipboard.
 
 ## REQUIRES
 
