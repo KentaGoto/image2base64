@@ -10,7 +10,7 @@ use MIME::Base64;
 ### Convert jpeg, png, gif, bmp to base64.
 ##############################################################
 
-# クリップボードから対象ファイルを得る
+# Getting the target file from the clipboard
 my $file_tmp              = Win32::Clipboard();
 my $file_tmp_decode_paste = $file_tmp->GetAs(CF_UNICODETEXT);
 my $file                  = decode( 'UTF16-LE', $file_tmp_decode_paste );
@@ -37,18 +37,17 @@ if ( $file =~ $regex_extension_jpg ) {
     die 'Unknown image file type.';
 }
 
-my $filesize = -s $file; # バイト数を得る
+my $filesize = -s $file; # Get a byte count
 
 open my $IN, '<', $file;
 binmode $IN;
 
 my $binary;
 
-# ファイルハンドルからバイト分のデータ（バイナリ）をスカラ変数$binaryに格納する
 read $IN, $binary, $filesize;
 close $IN;
 
-# バイナリをbase64にエンコード
+# Encode binary to base64
 my $base64 = encode_base64( $binary, '' );
 
 my $toClipboard = 'data:image/' . $mime_type . ';base64,' . $base64;
