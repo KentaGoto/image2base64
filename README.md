@@ -13,3 +13,6 @@
 ## REQUIRES
 
 - Windows
+
+## License
+MIT
